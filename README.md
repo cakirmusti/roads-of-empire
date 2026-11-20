@@ -6,7 +6,7 @@ Tarih temalı, Monopoly tarzı bir tahta oyunu. Tarayıcıda oynanır, kurulum g
 
 ## Oyna
 
-👉 **[Tarayıcıda oyna](https://KULLANICIADIN.github.io/roads-of-empire/)**
+👉 **[Tarayıcıda oyna](https://cakirmusti.github.io/Roads-Of-Empire/)**
 
 Ya da `index.html` dosyasını indirip çift tıkla. İnternet bağlantısı gerekmez.
 

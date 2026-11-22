@@ -51,6 +51,14 @@ body{background:
 .kare.sag .ic{transform:translate(-50%,-50%) rotate(-90deg)}
 .kare .ic .govde{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--b)*0.004);padding:1px;text-align:center}
 .kare .ic .ad{font-size:calc(var(--b)*0.0138)}
+.kare .alt-bant{flex:0 0 19%;border-top:1px solid var(--cizgi);background:#efe4c8;color:#5a4a36;display:flex;align-items:center;justify-content:center;font-size:calc(var(--b)*0.0122);line-height:1;overflow:hidden}
+.kare .alt-bant .tutar{align-items:center}
+.kare .alt-bant svg.r-em{width:1.09em;height:.82em;margin-left:.15em}
+.kare .alt-bant.sahipli{color:#fff;font-weight:700;font-size:calc(var(--b)*0.0165)}
+.kare .alt-bant.sahipli .r-em text{fill:currentColor}
+.kare .alt-bant.sahipli .r-em path{stroke:currentColor;opacity:.85}
+.kare .alt-bant.acik{color:#1a1a1a}
+.kare.ust .alt-bant{border-top:0;border-bottom:1px solid var(--cizgi)}
 .kare .ic .sehir-govde{justify-content:space-between;padding:calc(var(--b)*0.004) 1px calc(var(--b)*0.005)}
 .kare .ic .fiyat{font-size:calc(var(--b)*0.0122);color:#5a4a38}
 .kare .ic .ad{word-break:normal;overflow-wrap:normal;hyphens:manual}
@@ -155,23 +163,29 @@ body{background:
 /* ---------- PENCERELER ---------- */
 .perde{position:fixed;inset:0;background:#000b;display:flex;align-items:center;justify-content:center;z-index:50;padding:12px}
 .pencere{background:var(--parsomen);border:3px solid var(--altin-k);border-radius:14px;max-width:780px;width:100%;max-height:94vh;overflow:auto;padding:18px 22px;box-shadow:0 20px 60px #000}
+.pencere .btn{font-size:17px;padding:8px 22px}
 .pencere h2{color:var(--mor);margin:0 0 10px;text-align:center;letter-spacing:.1em}
 .pencere h3{margin:14px 0 6px}
 .pencere{color:#2a2118;color-scheme:light}
 .pencere input,.pencere select{color:#2a2118;background:#fffaf0;color-scheme:light}
 .pencere input::placeholder{color:#8a7a60}
-.k-izgara{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
-.k-kart{border:2px solid #8a7350;border-top:6px solid var(--pr);border-radius:10px;background:#fbf6ea;padding:10px}
+.k-izgara{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:12px}
+.k-kart{min-width:0;border:2px solid #8a7350;border-top:6px solid var(--pr);border-radius:10px;background:#fbf6ea;padding:10px}
 .k-ust{display:flex;gap:12px;align-items:center}
 .k-buyuk{width:64px !important;height:64px !important}
 .k-bilgi{flex:1;display:flex;flex-direction:column;gap:5px;min-width:0}
 .k-koltuk{font-size:12.5px;color:#6b5a40;letter-spacing:.05em}
 .k-bilgi input[type=text],.k-bilgi input:not([type]){font-family:inherit;font-size:17px;padding:5px 8px;border:1px solid #8a7350;border-radius:6px;width:100%;box-sizing:border-box}
 .k-bot{font-size:14px;display:flex;align-items:center;gap:5px}
+.k-renkler{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin:8px 0 0}
+.kr-yazi{font-size:13px;font-weight:700;color:#5a4a38;margin-right:2px}
+.kr{width:22px;height:22px;border-radius:50%;border:2px solid #5a4a38;padding:0;cursor:pointer}
+.kr.secili{box-shadow:0 0 0 2px #fbf6ea,0 0 0 4px #2a2118}
+.kr:disabled{opacity:.2;cursor:not-allowed}
 .k-adi{font-size:13px;font-weight:700;margin:6px 0 4px;color:#5a4a38}
-.k-secim{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
-.k-p{aspect-ratio:1;padding:3px;border:2px solid transparent;border-radius:8px;background:#efe4c9;cursor:pointer}
-.k-p img{width:100%;height:100%;object-fit:contain;display:block}
+.k-secim{display:grid;grid-template-columns:repeat(auto-fill,minmax(38px,1fr));gap:4px;min-width:0}
+.k-p{min-width:0;width:100%;aspect-ratio:1;padding:3px;border:2px solid transparent;border-radius:8px;background:#efe4c9;cursor:pointer}
+.k-p img,.k-p svg{width:100%;height:100%;max-width:100%;object-fit:contain;display:block}
 .k-p:hover:not(:disabled){border-color:#c9a23a}
 .k-p.secili{border-color:var(--pr);background:#fff;box-shadow:0 0 0 2px var(--pr)}
 .k-p:disabled{opacity:.25;cursor:not-allowed}
@@ -328,6 +342,13 @@ header,main{display:none}
 .kt-perde.kucuk .kt-baslik{font-size:32px}
 @keyframes ktParla{to{text-shadow:0 0 18px #f3d27a,0 2px 0 #f3d27a}}
 .kt-alt-yazi{font-size:19px;margin-top:4px}
+.kl{margin:10px auto 0;display:flex;flex-direction:column;gap:3px;width:max-content;min-width:270px;max-width:100%}
+.kl-s{display:grid;grid-template-columns:1fr 52px 22px 64px auto;align-items:center;gap:4px;font-size:15px;padding:2px 10px;border-radius:5px;background:#f6ecd2;opacity:0;animation:klGel .5s ease forwards}
+.kl-ad{font-style:italic;color:#3b2f22;text-align:left}
+.kl-eski{color:#8a7a62;text-decoration:line-through;text-align:right}
+.kl-ok{color:#9a7a2a;text-align:center}
+.kl-yeni{color:#1f6b2a;font-size:18px;text-align:right}
+@keyframes klGel{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .kt-sehirler{margin-top:8px;font-size:14px;color:#6b5a40;font-style:italic}
 .kt-not{margin-top:6px;font-size:13px;color:#7a5a12}
 .kt-kivilcim i{position:absolute;top:-4%;width:9px;height:15px;border-radius:2px;animation:ktDus linear forwards;opacity:.95}
@@ -384,7 +405,16 @@ header,main{display:none}
 .mini-tapu.yeni{animation:tapuGel .8s cubic-bezier(.2,1.4,.4,1)}
 @keyframes tapuGel{0%{opacity:0;transform:translate(var(--gx,40vw),-20vh) rotate(-40deg) scale(1.8)}100%{opacity:1}}
 .tapu-alan.k1 .mini-tapu.yeni,.tapu-alan.k3 .mini-tapu.yeni{--gx:-40vw}
-@media (max-aspect-ratio: 5/4){ .tapu-alan{display:none} }
+body.dar .tapu-alan{display:none}
+.kt-tapular{grid-column:1/3;display:none;flex-wrap:wrap;gap:3px;padding:4px 6px 6px;border-top:1px solid #5a4a3855}
+body.dar .kt-tapular:not(:empty){display:flex}
+.tc{width:27px;height:34px;background:#fffdf7;border:1px solid #3b2f22;border-radius:3px;display:flex;flex-direction:column;cursor:pointer;overflow:hidden;position:relative;box-shadow:0 1px 2px #0004}
+.tc:hover{transform:translateY(-2px)}
+.tc-b{height:8px;border-bottom:1px solid #3b2f22}
+.tc-a{flex:1;font-size:9.5px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;letter-spacing:-.02em}
+.tc-y{position:absolute;bottom:1px;left:0;right:0;display:flex;justify-content:center}
+.tc-y .yk{height:10px;width:auto}.tc-y .yk.kule{width:6.3px;margin:0 -1px}.tc-y .yk.kale{width:15px}
+.tc.tam{box-shadow:0 0 0 1.5px #e8b400}
 .sans-kart{width:310px;background:linear-gradient(#fffaf0,#f3e4bf);border:3px double #7a5a12;border-radius:14px;display:flex;flex-direction:column;align-items:center;padding-bottom:12px;color:#2a2118}
 .sk-ust{width:84%;color:#3e1659;text-align:center;padding:12px 0 7px;letter-spacing:.35em;font-weight:700;font-size:19px;border-bottom:2px solid #c99a2e}
 .sk-cerceve{margin-top:14px;width:256px;height:174px;border:3px solid #7a5a12;border-radius:14px;padding:4px;background:#fffaf0;box-shadow:inset 0 0 0 1px #c99a2e;overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -426,8 +456,8 @@ header,main{display:none}
    ===================================================================== */
 const AYAR = {
   para: "Rotum",
-  baslangicParasi: 2500,
-  baslangicBonusu: 200,      // Başlangıç karesinden geçince
+  baslangicParasi: 1500,
+  baslangicBonusu: 150,      // Başlangıç karesinden geçince
   vergi: 200,
   surgunCikisUcreti: 200,
   surgunMaksTur: 3,
@@ -441,7 +471,7 @@ const ULKELER = {
   "Portekiz":  {renk:"#6b3f22", cati:"İberya",                kule:50,  kale:50},
   "İspanya":   {renk:"#e3a21a", cati:"İberya",                kule:50,  kale:50},
   "Rusya":     {renk:"#5f7f2e", cati:"Asya'nın Efendileri", kule:100, kale:100},
-  "Japonya":   {renk:"#d9662b", cati:"Asya'nın Efendileri", kule:100, kale:100},
+  "Japonya":   {renk:"#d6487e", cati:"Asya'nın Efendileri", kule:100, kale:100},
   "İngiltere": {renk:"#c0262d", cati:"Angevin",             kule:150, kale:150},
   "Fransa":    {renk:"#2f5fb3", cati:"Angevin",             kule:150, kale:150},
   "Venedik":   {renk:"#16807e", cati:"Mare Mercatorum",     kule:200, kale:200},
@@ -463,7 +493,7 @@ const SANS = () => ({tur:"sans", ad:"Şans"});
 const TAHTA = [
   {tur:"baslangic", ad:"BAŞLANGIÇ"},
   S("Macau","Portekiz",60,  [2,4,10,30,90,160,250]),
-  S("Rio","Portekiz",60,    [2,4,10,30,90,160,250]),
+  S("Rio de Janeiro","Portekiz",60,[2,4,10,30,90,160,250]),
   S("Lisboa","Portekiz",80, [4,8,20,60,180,320,450]),
   L("Ivory Coast"),
   S("Manila","İspanya",100, [6,12,30,90,270,400,550]),
@@ -691,7 +721,11 @@ const PIYONLAR = {
   "Frig Başlığı": "data:image/webp;base64,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",
   "Kervan Devesi": "data:image/webp;base64,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"
 };
-const OYUNCU_RENKLERI = ["#b8322a","#2a5aa8","#2f8a4a","#c9901e","#7b3fa0","#178a8a"];
+// oyuncunun seçebileceği 8 basit renk
+const OYUNCU_RENKLERI = ["#ff2a3d","#1e90ff","#1fbf4f","#ffd60a","#a24dff","#ff8a00","#1a1a1a","#8a8f98"];
+const RENK_ADLARI = ["Kırmızı","Mavi","Yeşil","Sarı","Mor","Turuncu","Siyah","Gri"];
+// açık renklerin üstünde yazı koyu olur
+const acikRenk = hex => { const n = parseInt(hex.slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255; return (0.299 * r + 0.587 * g + 0.114 * b) > 165; };
 
 /* =====================================================================
    OYUN DURUMU
@@ -710,7 +744,7 @@ const karistir = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.
 
 function yeniOyun(ayarlar) {
   G = {
-    oyuncular: ayarlar.map((a, i) => ({id:i, ad:a.ad, piyon:a.piyon, bot:a.bot, renk:OYUNCU_RENKLERI[i],
+    oyuncular: ayarlar.map((a, i) => ({id:i, ad:a.ad, piyon:a.piyon, bot:a.bot, renk:a.renk || OYUNCU_RENKLERI[i],
       para:AYAR.baslangicParasi, konum:0, surgunde:false, surgunTur:0, af:0, iflas:false})),
     kareler: TAHTA.map((t, i) => ({...t, i, sahip:null, seviye:0})),
     sira: 0, faz: "zar", cift: 0, deste: karistir([...SANS_KARTLARI]), desteI: 0, gunluk: [], bitti: false,
@@ -732,13 +766,14 @@ const yapiMaliyeti = (k, seviye) => seviye === 5 ? ULKELER[k.ulke].kale : ULKELE
 // çatı (İberya, Angevin…) kurulduysa o çatının bütün kiraları 1.5 katı
 const catiOf = k => k.tur === "ticaret" ? "Mare Mercatorum" : k.tur === "sehir" ? ULKELER[k.ulke].cati : null;
 const catiKurulu = k => k.sahip !== null && catiOf(k) !== null && catiTam(k.sahip, catiOf(k));
-function kira(k) {
+function kira(k) { const m = kiraHam(k); return catiKurulu(k) ? Math.round(m * AYAR.catiCarpani) : m; }
+function kiraHam(k) {
   let m;
   if (k.tur === "ticaret") {
     const n = G.kareler.filter(x => x.tur === "ticaret" && x.sahip === k.sahip).length;
     m = AYAR.limanKiralari[n - 1];
   } else m = k.seviye === 0 ? (tamSet(k.sahip, k.ulke) ? k.kira[1] : k.kira[0]) : k.kira[k.seviye + 1];
-  return catiKurulu(k) ? Math.round(m * AYAR.catiCarpani) : m;
+  return m;
 }
 // inşa sadece bu tur üzerine gelinen kendi şehrinde yapılabilir
 function insaEdilebilir(p, k) {
@@ -1034,16 +1069,22 @@ function venedikSVG(H, resim = VENEDIK_ASLAN, zemin = "#c4081a") {
       <text x="${n.x}" y="${n.y - 7}" text-anchor="middle" class="kh-etiket">${n.ad}</text></g>`).join("")}
   </svg>`;
 }
-function haritaSVG(cati, sadece = null) {
+function haritaSVG(cati, sadece = null, mod = null) {
   if (cati === "Venedik" || sadece === "Venedik") return venedikSVG(HARITALAR_VENEDIK);
   if (cati === "Roma") return venedikSVG(HARITALAR_ROMA, ROMA_SANCAK, "#a01c1e");
   const H = HARITALAR[cati]; if (!H) return "";
-  const ulkeler = Object.keys(H.ulkeler).filter(u => !sadece || u === sadece);
-  let noktalar = H.noktalar;
+  const ulkeler = mod === "merchant" ? [] : Object.keys(H.ulkeler).filter(u => !sadece || u === sadece);
+  let noktalar = mod === "merchant" ? H.noktalar.filter(n => n.tur === "liman") : H.noktalar;
   if (sadece === "Venedik") noktalar = noktalar.filter(n => n.tur === "sehir");
   else if (sadece) noktalar = noktalar.filter(n => G.kareler.some(k => k.ad === n.ad && k.ulke === sadece));
   const merkez = H.noktalar.find(n => n.ad === "Venezia");
-  const rotalar = cati === "Mare Mercatorum" && merkez ? noktalar.filter(n => n !== merkez).map((n, i) => {
+  // Merchants' Center: dört liman arasında ticaret yolları (Afrika'nın etrafından)
+  const nk = ad => H.noktalar.find(n => n.ad === ad);
+  const yay = (a, b, i, e = .18) => { const mx = (a.x + b.x) / 2, my = Math.min(H.H + 15, (a.y + b.y) / 2 - Math.hypot(b.x - a.x, b.y - a.y) * e);
+    return `<path class="kh-rota" pathLength="1" d="M${a.x} ${a.y}Q${mx.toFixed(1)} ${my.toFixed(1)} ${b.x} ${b.y}" style="animation-delay:${.5 + i * .45}s"/>`; };
+  const rotalar = mod === "merchant" ? [["Cebelitarık", "Alexandria", -.12], ["Cebelitarık", "Ivory Coast", .05], ["Ivory Coast", "Malaka", -.3], ["Alexandria", "Malaka", -.2]]
+      .map(([a, b, e], i) => yay(nk(a), nk(b), i, e)).join("")
+    : cati === "Mare Mercatorum" && merkez ? noktalar.filter(n => n !== merkez).map((n, i) => {
     const mx = (merkez.x + n.x) / 2, my = (merkez.y + n.y) / 2 - Math.hypot(n.x - merkez.x, n.y - merkez.y) * .18;
     return `<path class="kh-rota" pathLength="1" d="M${merkez.x} ${merkez.y}Q${mx.toFixed(1)} ${my.toFixed(1)} ${n.x} ${n.y}" style="animation-delay:${.9 + i * .3}s"/>`; }).join("") : "";
   const gec = ulkeler.length ? 1.5 + ulkeler.length * .45 : 1.0;
@@ -1063,7 +1104,7 @@ function haritaSVG(cati, sadece = null) {
     ${ulkeler.map((u, i) => `<g class="kh-bayrak" style="animation-delay:${1.5 + i * .45}s" clip-path="url(#kh${i})">${bayrakSVG(u, H.kutular[u], H.noktalar)}</g>`).join("")}
     ${ulkeler.map((u, i) => `<path class="kh-cizgi" vector-effect="non-scaling-stroke" pathLength="1" d="${H.ulkeler[u]}" style="animation-delay:${i * .35}s"/>`).join("")}
     ${rotalar}
-    ${cati === "Mare Mercatorum" && !sadece ? `<g class="kh-bayrak" style="animation-delay:2.6s"><image href="${VENEDIK_BAYRAK}" x="${H.W - 92}" y="8" width="84" height="42"/><rect x="${H.W - 92}" y="8" width="84" height="42" fill="none" stroke="#3b2f22" stroke-width="1.2"/></g>` : ""}
+    ${cati === "Mare Mercatorum" && !sadece && mod !== "merchant" ? `<g class="kh-bayrak" style="animation-delay:2.6s"><image href="${VENEDIK_BAYRAK}" x="${H.W - 92}" y="8" width="84" height="42"/><rect x="${H.W - 92}" y="8" width="84" height="42" fill="none" stroke="#3b2f22" stroke-width="1.2"/></g>` : ""}
     ${noktalar.map((n, i) => `<g class="kh-nokta" style="animation-delay:${gec + i * .15}s;transform-origin:${n.x}px ${n.y}px">
       ${n.tur === "liman" ? `<circle cx="${n.x}" cy="${n.y}" r="${4.2 * z}" fill="#16807e" stroke="#fff" stroke-width="${1.4 * z}"/>` : `<circle cx="${n.x}" cy="${n.y}" r="${3.6 * z}" fill="#f3c14a" stroke="#3e1659" stroke-width="${1.3 * z}"/>`}
       <text x="${n.x}" y="${alta.includes(n.ad) ? n.y + 13 * z : n.y - 7 * z}" text-anchor="middle" class="kh-etiket" style="font-size:${9 * z}px;stroke-width:${2.5 * z}px">${n.ad}</text></g>`).join("")}
@@ -1081,23 +1122,44 @@ const catilarOf = o => o.iflas ? [] : TUM_CATILAR().filter(c => catiTam(o.id, c)
 
 async function formKontrol(p) {
   p.formlar = p.formlar || [];
-  let yeniUlke = null, yeniCati = null;
-  for (const u of Object.keys(ULKELER)) if (tamSet(p.id, u) && !p.formlar.includes("u:" + u)) { p.formlar.push("u:" + u); yeniUlke = u; }
+  let yeniUlke = null, yeniCati = null, yeniMerkez = false;
+  const yeniler = [];
+  for (const u of Object.keys(ULKELER)) if (tamSet(p.id, u) && !p.formlar.includes("u:" + u)) { p.formlar.push("u:" + u); yeniUlke = u; yeniler.push(u); }
   for (const c of TUM_CATILAR()) if (catiTam(p.id, c) && !p.formlar.includes("c:" + c)) { p.formlar.push("c:" + c); yeniCati = c; }
-  if (yeniCati) { log(`👑 ${p.ad} ${yeniCati} çatısını kurdu! Kiraları artık 1.5 katı.`); await kutlama(p, "cati", yeniCati); }
-  else if (yeniUlke) { log(`⚑ ${p.ad} ${FORM_ADI[yeniUlke] || yeniUlke} topraklarının tamamına sahip oldu!`); await kutlama(p, "ulke", yeniUlke); }
+  // Merchants' Center: dört limanın hepsi aynı oyuncuda (kira bonusu yok)
+  if (G.kareler.filter(k => k.tur === "ticaret").every(k => k.sahip === p.id) && !p.formlar.includes("m")) { p.formlar.push("m"); yeniMerkez = true; }
+  if (yeniMerkez) { log(`⚓ ${p.ad} dört limanın hepsine sahip oldu: Merchants' Center!`); await kutlama(p, "merchant", "Merchants' Center", yeniler, true); }
+  if (yeniCati) { log(`👑 ${p.ad} ${yeniCati} çatısını kurdu! Kiraları artık 1.5 katı.`); await kutlama(p, "cati", yeniCati, yeniler, yeniMerkez); }
+  else if (yeniUlke) { log(`⚑ ${p.ad} ${FORM_ADI[yeniUlke] || yeniUlke} topraklarının tamamına sahip oldu!`); await kutlama(p, "ulke", yeniUlke, yeniler); }
   render();
 }
 
 // kutlamada görünen ad (ülke anahtarı değişmeden)
 const FORM_ADI = {"İngiltere": "Birleşik Krallık"};
-async function kutlama(p, tur, ad) {
+// formlamadan sonra şehirlerin eski ve yeni kirası (kule ve kale dahil)
+function kiraListesi(p, tur, ad, yeniler = [], yeniMerkez = false) {
+  const ulkeler = tur === "cati" ? catiUlkeleri(ad) : tur === "ulke" ? [ad] : [];
+  const ks = G.kareler.filter(k => (k.tur === "sehir" && ulkeler.includes(k.ulke)) ||
+    (k.tur === "ticaret" && (tur === "merchant" || (tur === "cati" && ad === "Mare Mercatorum"))));
+  ks.sort((a, b) => (a.tur === "ticaret") - (b.tur === "ticaret"));
+  const satir = ks.map(k => {
+    let eski, yeni = tur === "merchant" ? kiraHam(k) : kira(k);
+    if (k.tur === "ticaret") eski = (tur === "merchant" || yeniMerkez) ? AYAR.limanKiralari[2] : kiraHam(k);
+    else eski = (yeniler.includes(k.ulke) && k.seviye === 0) ? k.kira[0] : kiraHam(k);
+    return {ad: k.ad, eski, yeni};
+  });
+  return satir;
+}
+async function kutlama(p, tur, ad, yeniler = [], yeniMerkez = false) {
   const el = document.getElementById("kutlama");
-  const ulkeler = tur === "cati" ? catiUlkeleri(ad) : [ad];
-  const renkler = ulkeler.map(u => ULKELER[u].renk);
+  const merkezMi = tur === "merchant";
+  const ulkeler = tur === "cati" ? catiUlkeleri(ad) : merkezMi ? [] : [ad];
+  const renkler = merkezMi ? ["#c99a2e", "#3b2f22"] : ulkeler.map(u => ULKELER[u].renk);
   const sehirler = G.kareler.filter(k => ulkeler.includes(k.ulke) || (tur === "cati" && ad === "Mare Mercatorum" && k.tur === "ticaret")).map(k => k.ad);
-  const buyuk = tur === "cati";
-  const haritaVar = buyuk ? !!HARITALAR[ad] : (ad === "Venedik" || Object.values(HARITALAR).some(h => h.ulkeler[ad]));
+  const buyuk = tur === "cati" || merkezMi;
+  const haritaVar = merkezMi ? true : buyuk ? !!HARITALAR[ad] : (ad === "Venedik" || Object.values(HARITALAR).some(h => h.ulkeler[ad]));
+  const liste = kiraListesi(p, tur, ad, yeniler, yeniMerkez);
+  const klBas = haritaVar ? (buyuk ? 3.2 : 2.6) : 1.2;   // harita bitince liste başlar
   let kivilcim = "";
   for (let i = 0; i < (buyuk ? 70 : 30); i++) {
     const r = buyuk ? (i % 3 === 0 ? "#f3d27a" : renkler[i % renkler.length]) : (i % 2 ? "#f3d27a" : renkler[0]);
@@ -1107,15 +1169,21 @@ async function kutlama(p, tur, ad) {
     <div class="kt-isinlar"></div>
     <div class="kt-kart" style="--r1:${renkler[0]};--r2:${renkler[1] || renkler[0]}">
       <div class="kt-serit"></div>
-      <div class="kt-ust-yazi">${buyuk ? "BİR ÇATI KURULDU" : "ÜLKE BİRLEŞTİ"}</div>
-      ${haritaVar ? (buyuk ? haritaSVG(ad) : haritaSVG(Object.keys(HARITALAR).find(c => c === "Mare Mercatorum" ? ad === "Venedik" : HARITALAR[c].ulkeler[ad]), ad)) : `<div class="kt-piyon">${piyonHTML(p)}</div>`}
-      <div class="kt-baslik${(FORM_ADI[ad] || ad).length > 10 ? " uzun" : ""}">${haritaVar ? `<span class="kt-mini">${piyonHTML(p)}</span>` : ""}${buyuk ? "👑 " : "⚑ "}${(FORM_ADI[ad] || ad).toLocaleUpperCase("tr")}</div>
-      <div class="kt-alt-yazi"><b>${p.ad}</b> ${buyuk ? "imparatorluğunu kurdu!" : "bütün şehirlere sahip!"}</div>
-      <div class="kt-sehirler">${sehirler.join(" · ")}</div>
-      <div class="kt-not">${buyuk ? "Bu çatıdaki bütün kiraların 1.5 katına çıktı!" : "Artık burada kule dikebilirsin."}</div>
+      <div class="kt-ust-yazi">${merkezMi ? "TİCARET MERKEZİ KURULDU" : buyuk ? "BİR ÇATI KURULDU" : "ÜLKE BİRLEŞTİ"}</div>
+      ${haritaVar ? (merkezMi ? haritaSVG("Mare Mercatorum", null, "merchant") : buyuk ? haritaSVG(ad) : haritaSVG(Object.keys(HARITALAR).find(c => c === "Mare Mercatorum" ? ad === "Venedik" : HARITALAR[c].ulkeler[ad]), ad)) : `<div class="kt-piyon">${piyonHTML(p)}</div>`}
+      <div class="kt-baslik${(FORM_ADI[ad] || ad).length > 10 ? " uzun" : ""}">${haritaVar ? `<span class="kt-mini">${piyonHTML(p)}</span>` : ""}${merkezMi ? "⚓ " : buyuk ? "👑 " : "⚑ "}${merkezMi ? "MERCHANTS' CENTER" : (FORM_ADI[ad] || ad).toLocaleUpperCase("tr")}</div>
+      <div class="kt-alt-yazi"><b>${p.ad}</b> ${merkezMi ? "dört limanın hepsine sahip!" : buyuk ? "imparatorluğunu kurdu!" : "bütün şehirlere sahip!"}</div>
+      <div class="kl">${liste.map((x, i) => `<div class="kl-s" style="animation-delay:${klBas + i * .35}s"><span class="kl-ad">${x.ad}</span><span class="kl-eski">${x.eski}</span><span class="kl-ok">➜</span><b class="kl-yeni" data-e="${x.eski}" data-y="${x.yeni}" data-g="${klBas + .2 + i * .35}">${x.eski}</b>${RS}</div>`).join("")}</div>
+      <div class="kt-not">${merkezMi ? "Ticaret yolları senin elinde." : tur === "cati" ? "Bu çatıdaki bütün kiraların 1.5 katına çıktı!" : "Artık burada kule dikebilirsin."}</div>
     </div>
     <div class="kt-kivilcim">${kivilcim}</div></div>`;
-  await uyku(buyuk ? (haritaVar ? 5800 : 4200) : (haritaVar ? 4000 : 2600));
+  el.querySelectorAll(".kl-yeni").forEach(b => setTimeout(() => {
+    const e = +b.dataset.e, y = +b.dataset.y, t0 = performance.now();
+    const f = now => { const q = Math.min(1, (now - t0) / 700); b.textContent = Math.round(e + (y - e) * q).toLocaleString("tr-TR"); if (q < 1) requestAnimationFrame(f); };
+    requestAnimationFrame(f);
+  }, +b.dataset.g * 1000));
+  const listeBitis = (klBas + .2 + liste.length * .35 + .8) * 1000 + 2400;   // son sayı yükseldikten sonra okumaya zaman
+  await uyku(Math.max(buyuk ? (haritaVar ? 5800 : 4200) : (haritaVar ? 4000 : 2600), listeBitis));
   el.innerHTML = "";
 }
 
@@ -1134,9 +1202,100 @@ function cevapla(v) {
 }
 
 /* ---------- bilgisayar oyuncusu ---------- */
+/* =====================================================================
+   BİLGİSAYAR OYUNCULARI (1.1: akıllı botlar)
+   Kolay: eski basit kurallar + ara sıra hata. Orta ve Zor: set/çatı bilinci,
+   yedek para, inşaat önceliği, sürgün stratejisi, Kâşif hedefi.
+   Rakibin setini bilerek engelleme yok (takasla birlikte 1.2'de).
+   ===================================================================== */
+const BOT_SEVIYELERI = ["Kolay", "Orta", "Zor"];
+const botSeviye = p => (p && p.seviye) || (G && G.botSeviye) || "Orta";
+// iki zarla 2..12 gelme olasılıkları
+const ZAR_OLASILIK = [0, 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1].map(x => x / 36);
+
+// önümüzdeki zar atışında rakip karelerine düşüp ödenecek kira: en kötü ve ortalama
+function botTehlike(p) {
+  let enKotu = 0, ortalama = 0;
+  for (let z = 2; z <= 12; z++) {
+    const k = G.kareler[(p.konum + z) % N];
+    const kr = (k.tur === "sehir" || k.tur === "ticaret") && k.sahip !== null && k.sahip !== p.id ? kira(k) : k.tur === "vergi" ? AYAR.vergi : 0;
+    enKotu = Math.max(enKotu, kr); ortalama += kr * ZAR_OLASILIK[z];
+  }
+  // tahtadaki genel tehlike: rakiplerin en yüksek kirası (bir tur sonrası için)
+  const genel = Math.max(0, ...G.kareler.filter(k => k.sahip !== null && k.sahip !== p.id && (k.tur === "sehir" || k.tur === "ticaret")).map(kira));
+  return {enKotu, ortalama, genel};
+}
+// elde tutulması gereken yedek para
+function botYedek(p) {
+  const t = botTehlike(p), sv = botSeviye(p);
+  const bosKalan = G.kareler.filter(k => (k.tur === "sehir" || k.tur === "ticaret") && k.sahip === null).length;
+  const erken = bosKalan > 14;   // oyunun başında daha rahat harcanır
+  if (sv === "Zor") return Math.min(900, Math.round((erken ? 60 : 120) + t.enKotu * .9 + t.genel * .25));
+  return Math.min(700, Math.round((erken ? 80 : 150) + t.enKotu * .6));
+}
+// bir şehrin/limanın bot için değeri (satın alma kararı)
+function botAlmali(p, k) {
+  const fiyat = fiyatOf(k), sv = botSeviye(p);
+  if (sv === "Kolay") return p.para - fiyat >= 300 && Math.random() > .15;
+  if (p.para < fiyat) return false;
+  const kalan = p.para - fiyat, yedek = botYedek(p);
+  if (k.tur === "ticaret") {
+    const benim = G.kareler.filter(x => x.tur === "ticaret" && x.sahip === p.id).length;
+    return kalan >= yedek * (benim >= 1 ? .6 : .85);
+  }
+  const ulke = ulkeKareleri(k.ulke);
+  const benim = ulke.filter(x => x.sahip === p.id).length;
+  const rakipVar = ulke.some(x => x.sahip !== null && x.sahip !== p.id);
+  if (benim === ulke.length - 1) return kalan >= (sv === "Zor" ? 0 : yedek * .3);          // seti tamamlıyor
+  // çatı ortağı ülke zaten bendeyse bu ülke daha değerli
+  const cati = ULKELER[k.ulke].cati;
+  const ortakBende = catiUlkeleri(cati).some(u => u !== k.ulke && tamSet(p.id, u));
+  if (rakipVar) return kalan >= yedek * 1.4 + 100;                                          // set kapanmış, az değerli
+  if (benim > 0 || ortakBende) return kalan >= yedek * .7;
+  return kalan >= yedek;
+}
+// inşaat: sadece üzerine gelinen şehre, yedek para korunarak; Zor bot 3. kuleye kadar zorlar
+function botInsa(p) {
+  const sv = botSeviye(p);
+  for (let tekrar = 0; tekrar < 6; tekrar++) {
+    const k = G.insaKare !== null && G.insaKare !== undefined ? G.kareler[G.insaKare] : null;
+    if (!k || !insaEdilebilir(p, k)) break;
+    const maliyet = yapiMaliyeti(k, k.seviye + 1);
+    const yedek = sv === "Kolay" ? 500 : botYedek(p) * (sv === "Zor" && k.seviye < 3 ? .6 : 1);
+    if (p.para - maliyet < yedek) break;
+    insaEt(p, k);
+  }
+}
+// sürgün: oyunun başında hemen çık (şehir almak için), tahta tehlikeliyse sürgünde kal
+function botSurgundenCik(p) {
+  const sv = botSeviye(p);
+  if (sv === "Kolay") return p.para > 800;
+  const bosKalan = G.kareler.filter(k => (k.tur === "sehir" || k.tur === "ticaret") && k.sahip === null).length;
+  const t = botTehlike(p);
+  if (bosKalan >= 6) return p.para - AYAR.surgunCikisUcreti >= botYedek(p) * .5;
+  return t.genel < 250 && p.para - AYAR.surgunCikisUcreti >= botYedek(p);
+}
+// Kâşif: ücret karşılığı gidilecek en iyi kare (seti tamamlayan şehir ya da kule dikilecek şehir)
+function botKasifHedef(p) {
+  if (botSeviye(p) === "Kolay" || p.para < AYAR.kasifUcreti + 100) return null;
+  let enIyi = null, puan = 0;
+  for (const k of G.kareler) {
+    if (k.i === KASIF_I) continue;
+    let s = 0;
+    if (k.tur === "sehir" && k.sahip === null && p.para - AYAR.kasifUcreti >= k.fiyat) {
+      const ulke = ulkeKareleri(k.ulke), benim = ulke.filter(x => x.sahip === p.id).length;
+      const rakipVar = ulke.some(x => x.sahip !== null && x.sahip !== p.id);
+      s = benim === ulke.length - 1 ? 100 : rakipVar ? 5 : 20 + benim * 15;
+    } else if (k.tur === "ticaret" && k.sahip === null && p.para - AYAR.kasifUcreti >= AYAR.limanFiyati) s = 30;
+    else if (k.tur === "sehir" && k.sahip === p.id && tamSet(p.id, k.ulke) && k.seviye < 5 &&
+             p.para - AYAR.kasifUcreti - yapiMaliyeti(k, k.seviye + 1) >= botYedek(p)) s = 60 + k.fiyat / 20;
+    if (s > puan) { puan = s; enIyi = k.i; }
+  }
+  return puan >= 20 ? enIyi : null;
+}
 function botKarari(p, tur, veri) {
-  if (tur === "satin") return p.para - fiyatOf(veri.k) >= 300;
-  if (tur === "kasif") return null;
+  if (tur === "satin") return botAlmali(p, veri.k);
+  if (tur === "kasif") return botKasifHedef(p);
   return true;
 }
 function botDevam() {
@@ -1145,17 +1304,11 @@ function botDevam() {
   if (!p.bot || mesgul || bekleyen) return;
   setTimeout(() => {
     if (G.bitti || suanki() !== p || mesgul || bekleyen) return;
-    // önce inşa
-    for (let tekrar = 0; tekrar < 6; tekrar++) {
-      const aday = G.kareler.filter(k => insaEdilebilir(p, k) && p.para - yapiMaliyeti(k, k.seviye + 1) >= 500)
-        .sort((a, b) => b.fiyat - a.fiyat)[0];
-      if (!aday) break;
-      insaEt(p, aday);
-    }
+    botInsa(p);
     if (G.faz === "zar" || G.faz === "tekrar") {
       if (p.surgunde && G.faz === "zar") {
         if (p.af > 0) { afKullan(); return; }
-        if (p.para > 800) { surguneOde(); return; }
+        if (botSurgundenCik(p)) { surguneOde(); return; }
       }
       zarAt();
     } else if (G.faz === "bitti") turuBitir();
@@ -1350,11 +1503,11 @@ function tahtaKur() {
     if (yon === "kose") {
       d.innerHTML = `${SIMGELER[k.tur]}<div class="ad">${k.ad}</div>`;
     } else if (k.tur === "sehir") {
-      d.innerHTML = `<div class="ic"><div class="bant" style="background:${renkOf(k.ulke)}"></div><div class="govde sehir-govde"><div class="ad${adSinif(k.ad)}">${k.ad}</div><div class="fiyat">${k.fiyat}</div></div></div>`;
+      d.innerHTML = `<div class="ic"><div class="bant" style="background:${renkOf(k.ulke)}"></div><div class="govde sehir-govde"><div class="ad${adSinif(k.ad)}">${k.ad}</div></div><div class="alt-bant"></div></div>`;
     } else if (k.tur === "sans") {
       d.innerHTML = `<div class="ic"><div class="govde">${SIMGELER.sans}<div class="sans-yazi">ŞANS</div></div></div>`;
     } else if (k.tur === "ticaret") {
-      d.innerHTML = `<div class="ic"><div class="govde">${SIMGELER[k.ad]}<div class="ad${adSinif(k.ad)}">${k.ad}</div></div></div>`;
+      d.innerHTML = `<div class="ic"><div class="govde">${SIMGELER[k.ad]}<div class="ad${adSinif(k.ad)}">${k.ad}</div></div><div class="alt-bant"></div></div>`;
     } else {
       d.innerHTML = `<div class="ic"><div class="govde"><div class="ad">VERGİ</div></div></div>`;
     }
@@ -1442,9 +1595,18 @@ function render() {
   // kareler
   G.kareler.forEach(k => {
     const d = document.getElementById("k" + k.i);
-    const sb = d.querySelector(".sahip");
-    if (k.sahip !== null) { sb.style.display = "block"; sb.style.setProperty("--sahip-renk", oyuncu(k.sahip).renk); }
-    else sb.style.display = "none";
+    // alt bant: sahipsizse bej bant ve fiyat, alınmışsa sahibinin renginde bant ve güncel kira
+    const ab = d.querySelector(".alt-bant");
+    if (ab) {
+      const sh = k.sahip !== null ? oyuncu(k.sahip) : null;
+      const iz = sh ? sh.renk + ":" + kira(k) : "b:" + fiyatOf(k);
+      if (ab.dataset.iz !== iz) {
+        ab.dataset.iz = iz;
+        ab.className = "alt-bant" + (sh ? " sahipli" + (acikRenk(sh.renk) ? " acik" : "") : "");
+        ab.style.background = sh ? sh.renk : "";
+        ab.innerHTML = sh ? para(kira(k)) : para(fiyatOf(k));
+      }
+    }
     { const y = d.querySelector(".yapilar"), h = yapiHTML(k); if (y.dataset.iz !== h) { y.innerHTML = h; y.dataset.iz = h; } }
     d.querySelector(".piyonlar").innerHTML = G.oyuncular.filter(o => !o.iflas && o.konum === k.i)
       .map(o => piyonHTML(o, o === suanki() ? "aktif" : "")).join("");
@@ -1506,6 +1668,7 @@ function render() {
   istem.classList.toggle("acik", !!kutu);
 
   // masadaki tapular: her oyuncunun köşesinin altında
+  yerlesimKontrol();
   for (let i = 0; i < 4; i++) tapuAlaniCiz(i);
 
 
@@ -1520,6 +1683,7 @@ function render() {
       <div class="kt-para">${para(o.para)}</div>
       <div class="kt-isim">${o.ad}</div>
       ${catilarOf(o).map(c => `<div class="kt-cati">👑 ${c}</div>`).join("")}
+      <div class="kt-tapular">${o.iflas ? "" : G.kareler.filter(k => k.sahip === o.id).map(k => `<div class="tc ${k.tur === "sehir" && tamSet(o.id, k.ulke) ? "tam" : ""}" title="${k.ad}" onclick="kareTikla(${k.i})"><div class="tc-b" style="background:${k.tur === "sehir" ? renkOf(k.ulke) : "#3b2f22"}"></div><div class="tc-a">${k.tur === "ticaret" ? "⚓" : k.ad.slice(0, 3)}</div>${k.seviye ? `<div class="tc-y">${yapiHTML(k)}</div>` : ""}</div>`).join("")}</div>
       <div class="kt-durum">${o.iflas ? "İflas etti" : [o.surgunde ? `⛓ Sürgünde (${o.surgunTur}/${AYAR.surgunMaksTur})` : "", o.af ? `📜 Af mektubu ×${o.af}` : ""].filter(Boolean).join(" · ")}</div>`;
   }
   if (insaAcik) insaPenceresi();
@@ -1552,6 +1716,13 @@ function miniTapu(k, yeni) {
     <div class="mt-bant" style="background:${renk}">${k.tur === "ticaret" ? "⚓" : ""}</div>
     <div class="mt-ad">${k.ad}</div>${yapi ? `<div class="mt-yapi">${yapi}</div>` : ""}</div>`;
 }
+// tahtanın yanında tapulara yer yoksa tapular ismin altına küçük kartlar olarak gelir
+function yerlesimKontrol() {
+  const t = document.querySelector(".tahta-govde"); if (!t) return;
+  const r = t.getBoundingClientRect();
+  document.body.classList.toggle("dar", r.left < 160 || window.innerWidth / window.innerHeight < 1.25);
+}
+window.addEventListener("resize", yerlesimKontrol);
 function tapuAlaniCiz(i) {
   const el = document.getElementById("tapular" + i); if (!el) return;
   const o = G && G.oyuncular[i];
@@ -1577,6 +1748,8 @@ function pencereKapat() { document.getElementById("pencere").innerHTML = ""; ins
 
 let kurulumSayi = 2;
 let kurulumSecim = ["Fes", "Prusya Kaskı", "Napolyon Şapkası", "Roma Miğferi"];
+let kurulumRenk = [0, 1, 2, 3];
+let kurulumSeviye = "Orta";
 function kurulumGoster() {
     const koltuklar = ["P1 · sol üst", "P2 · sağ üst", "P3 · sol alt", "P4 · sağ alt"];
   let kartlar = "";
@@ -1586,13 +1759,16 @@ function kurulumGoster() {
         <div class="k-bilgi"><div class="k-koltuk">${koltuklar[i]}</div>
           <input id="ka${i}" value="" maxlength="16" placeholder="İsmini yaz">
           <label class="k-bot"><input type="checkbox" id="kb${i}" ${i > 0 ? "checked" : ""}> Bilgisayar oynasın</label></div></div>
+      <div class="k-renkler" id="kr${i}"></div>
       <div class="k-adi" id="kad${i}"></div>
       <div class="k-secim" id="kg${i}"></div></div>`;
   }
   pencereAc(`<h2>ROADS OF EMPIRE</h2>
     <div style="text-align:center;margin:-2px 0 10px">Oyuncu sayısı:
       <select id="ksayi" onchange="kurulumSayiDegis(this.value)">${[2,3,4].map(n => `<option ${n === kurulumSayi ? "selected" : ""}>${n}</option>`).join("")}</select>
-      <span class="not">· Herkes piyonunu aşağıdan seçer</span></div>
+      <span class="not">· Herkes piyonunu aşağıdan seçer</span>
+      <span style="margin-left:14px">Bilgisayar seviyesi:</span>
+      <select id="kseviye">${BOT_SEVIYELERI.map(v => `<option ${v === kurulumSeviye ? "selected" : ""}>${v}</option>`).join("")}</select></div>
     <div class="k-izgara">${kartlar}</div>
     <div id="khata" style="color:#a02020;text-align:center;min-height:20px"></div>
     <div style="text-align:center"><button class="btn altin" onclick="kurulumBasla()">⚔ Oyunu başlat</button></div>`);
@@ -1600,6 +1776,13 @@ function kurulumGoster() {
 }
 function kurulumCiz() {
   for (let i = 0; i < 4; i++) {
+    const rk = OYUNCU_RENKLERI[kurulumRenk[i]];
+    document.getElementById("ks" + i).style.setProperty("--pr", rk);
+    document.getElementById("kp" + i).style.setProperty("--pr", rk);
+    document.getElementById("kr" + i).innerHTML = `<span class="kr-yazi">Renk:</span>` + OYUNCU_RENKLERI.map((c, j) => {
+      const baskasi = kurulumRenk.some((x, m) => m !== i && m < kurulumSayi && x === j);
+      return `<button class="kr ${kurulumRenk[i] === j ? "secili" : ""}" style="background:${c}" ${baskasi ? "disabled" : ""} title="${RENK_ADLARI[j]}" onclick="kurulumRenkSec(${i}, ${j})"></button>`;
+    }).join("");
     document.getElementById("kp" + i).innerHTML = piyonSVG(kurulumSecim[i]);
     document.getElementById("kad" + i).textContent = kurulumSecim[i];
     document.getElementById("kg" + i).innerHTML = Object.keys(PIYONLAR).map(ad => {
@@ -1609,21 +1792,25 @@ function kurulumCiz() {
   }
 }
 function kurulumPiyonSec(i, ad) { kurulumSecim[i] = ad; kurulumCiz(); }
+function kurulumRenkSec(i, j) { kurulumRenk[i] = j; kurulumCiz(); }
 function kurulumSayiDegis(n) {
   kurulumSayi = +n;
   for (let i = 0; i < 4; i++) document.getElementById("ks" + i).style.display = i < kurulumSayi ? "" : "none";
   // yeni gelen oyuncunun piyonu başkasınınkiyle aynıysa boş bir piyon ver
   for (let i = 0; i < kurulumSayi; i++) if (kurulumSecim.slice(0, i).includes(kurulumSecim[i]))
     kurulumSecim[i] = Object.keys(PIYONLAR).find(ad => !kurulumSecim.slice(0, kurulumSayi).includes(ad));
+  for (let i = 0; i < kurulumSayi; i++) if (kurulumRenk.slice(0, i).includes(kurulumRenk[i]))
+    kurulumRenk[i] = OYUNCU_RENKLERI.findIndex((c, j) => !kurulumRenk.slice(0, kurulumSayi).includes(j));
   kurulumCiz();
 }
 function kurulumBasla() {
   const a = [];
   for (let i = 0; i < kurulumSayi; i++) {
     const bot = document.getElementById("kb" + i).checked;
-    a.push({ad: document.getElementById("ka" + i).value.trim() || (bot ? "Bilgisayar " : "Oyuncu ") + (i + 1), piyon: kurulumSecim[i], bot: document.getElementById("kb" + i).checked}); }
+    a.push({ad: document.getElementById("ka" + i).value.trim() || (bot ? "Bilgisayar " : "Oyuncu ") + (i + 1), piyon: kurulumSecim[i], renk: OYUNCU_RENKLERI[kurulumRenk[i]], bot: document.getElementById("kb" + i).checked}); }
   if (new Set(a.map(x => x.piyon)).size !== a.length) { document.getElementById("khata").textContent = "Her oyuncu farklı bir piyon seçmeli."; return; }
-  pencereKapat(); yeniOyun(a);
+  kurulumSeviye = document.getElementById("kseviye").value;
+  pencereKapat(); yeniOyun(a); G.botSeviye = kurulumSeviye;
 }
 
 function kurallariGoster() {
@@ -1635,7 +1822,8 @@ function kurallariGoster() {
       <li>Herkes <b>${para(AYAR.baslangicParasi)}</b> ile başlar. Başlangıç karesinden her geçişte <b>+${para(AYAR.baslangicBonusu)}</b>.</li>
       <li>Sahipsiz bir şehre ya da limana gelince satın alabilirsin. Başkasının şehrine gelince kira ödersin.</li>
       <li>Bir ülkenin bütün şehirleri sendeyse boş şehrin kirası artar. O ülkenin bir şehrine <b>geldiğin turda</b> o şehre <b>kule</b> dikebilirsin; 4 kuleden sonra <b>kale</b> gelir. Her kule aynı fiyattır. Yapılar yarı fiyatına geri satılır.</li>
-      <li><b>Çatılar:</b> İberya (Portekiz + İspanya), Asya'nın Efendileri (Rusya + Japonya), Angevin (İngiltere + Fransa), Mare Mercatorum (Venedik + 4 liman) ve Roma. Bir çatının tamamı sendeyse o çatıdaki bütün kiraların <b>1.5 katına</b> çıkar.</li>
+      <li><b>Çatılar:</b> İberya (Portekiz + İspanya), Asya'nın Efendileri (Rusya + Japonya), Angevin (Birleşik Krallık + Fransa), Mare Mercatorum (Venedik + 4 liman) ve Roma. Bir çatının tamamı sendeyse o çatıdaki bütün kiraların <b>1.5 katına</b> çıkar.</li>
+      <li><b>Merchants' Center:</b> Dört limanın hepsi sendeyse ticaret merkezini kurarsın. Liman kirası 200 olur.</li>
       <li><b>Şans:</b> tarihî bir kart çekersin. <b>Vergi:</b> ${AYAR.vergi} ödersin.</li>
       <li><b>Sürgün:</b> şans kartıyla ya da üst üste 3 çift atınca gidersin. Çıkmak için ${AYAR.surgunCikisUcreti} öde, çift at ya da af mektubunu kullan. En fazla ${AYAR.surgunMaksTur} tur beklersin.</li>
       <li><b>Kâşif:</b> ${AYAR.kasifUcreti} ödeyip istediğin kareye gidebilirsin (Başlangıç bonusu almazsın). <b>Kervansaray:</b> dinlenme.</li>

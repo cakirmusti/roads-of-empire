@@ -13,9 +13,10 @@ Ya da `index.html` dosyasını indirip çift tıkla. İnternet bağlantısı ger
 ## Özellikler
 
 - 32 karelik tahta: 8 ülke, 4 liman, Şans kareleri, Sürgün, Kervansaray ve Kâşif
-- 2–4 oyuncu, istenen oyuncuyu bilgisayar oynayabilir
+- 2–4 oyuncu, istenen oyuncuyu bilgisayar oynayabilir (Kolay, Orta, Zor)
 - 14 farklı 3D piyon
 - Ülke ve çatı formlama: İberya, Asya'nın Efendileri, Angevin, Mare Mercatorum ve Roma, harita ve bayrak animasyonlarıyla
+- Merchants' Center: dört limanın hepsine sahip olunca ticaret merkezi
 - 27 tarihî Şans kartı
 - Para birimi: Rotum (R//) ve Venedik Dukatı
 
@@ -29,6 +30,7 @@ Roads of Empire'ı ben tasarladım. Oyunun kodunu Anthropic'in yapay zekâsı **
 
 ## Sürümler
 
+- **1.1** — dar pencerede piyon seçimi ve tapular düzeldi; başlangıç parası 1.500, Başlangıç bonusu 150; akıllı bilgisayar oyuncuları ve zorluk seviyeleri; Merchants' Center; karelerde fiyat/kira bandı; oyuncu rengi seçimi; formlamada kira artış listesi; Japonya'nın rengi pembe; Rio de Janeiro
 - **1.0** — ilk sürüm
 
 ## Kaynaklar

@@ -1,4 +1,6 @@
-# Roads of Empire
+<p align="center"><img src="logo.png" alt="Roads of Empire logosu" width="200"></p>
+
+<h1 align="center">Roads of Empire</h1>
 
 Tarih temalı, Monopoly tarzı bir tahta oyunu. Tarayıcıda oynanır, kurulum gerektirmez.
 
@@ -17,7 +19,10 @@ Ya da `index.html` dosyasını indirip çift tıkla. İnternet bağlantısı ger
 - 14 farklı 3D piyon
 - Ülke ve çatı formlama: İberya, Asya'nın Efendileri, Angevin, Mare Mercatorum ve Roma, harita ve bayrak animasyonlarıyla
 - Merchants' Center: dört limanın hepsine sahip olunca ticaret merkezi
-- 27 tarihî Şans kartı
+- 54 tarihî Şans kartı, saklanabilen kartlar, savaş tazminatı ve isyan kartları
+- Oyuncular arası takas: şehir, para ve saklanan kartlar
+- Borç ekranı: kule, kale ve şehir satarak borcunu öde
+- Mülke göre vergi ve tarihî bayraklarla kutlama ekranları
 - Para birimi: Rotum (R//) ve Venedik Dukatı
 
 ## Nasıl yapıldı
@@ -30,6 +35,7 @@ Roads of Empire'ı ben tasarladım. Oyunun kodunu Anthropic'in yapay zekâsı **
 
 ## Sürümler
 
+- **1.2 Takas** — oyuncular arası takas (ilk 5 tur kapalı, sadece zar atmadan önce) ve takas yapan botlar; borç ekranı (kule ve kale %70'ine, şehir yarı fiyatına satılır); mülk değerinin %10'u kadar vergi (en az 50, en çok 1.000, tapusuz oyuncu ödemez) ve yeni vergi kartı; Şans destesi 54 karta çıktı (Panayır, Ahi misafirliği, Savaş tazminatı, İsyan ve saklanabilen kartlar); iflas ekranı; Kâşif yolculuğu animasyonu, Başlangıç bonusu ve yeni kısıtları; zar atılınca varış yerinin görünmesi; daha koyu kira bantları; yeni tapu kartları; Roma İmparatorluğu adı ve net bayraklar
 - **1.1** — dar pencerede piyon seçimi ve tapular düzeldi; başlangıç parası 1.500, Başlangıç bonusu 150; akıllı bilgisayar oyuncuları ve zorluk seviyeleri; Merchants' Center; karelerde fiyat/kira bandı; oyuncu rengi seçimi; formlamada kira artış listesi; Japonya'nın rengi pembe; Rio de Janeiro
 - **1.0** — ilk sürüm
 
